@@ -67,15 +67,15 @@ void loop() {
 
   // Run Motors Forward
   lMotor -> run(FORWARD);
-  rMotor -> run(FOWARD);
+  rMotor -> run(FORWARD);
 
   //Equation for motor speeds based on sensor readings
-  lSpeed = 20 - (lRead - lSense) / Kp // Sets speed based on sensor readings divided by setpoint value
+  lSpeed = 20 - (lSense - lRead) / Kp; // Sets speed based on sensor readings divided by setpoint value
   if (lSpeed < 0) {
     lSpeed = 0;
   }
 
-  rSpeed = 20 - (rRead - rSense) / Kp; // Sets speed based on sensor readings divided by setpoint value
+  rSpeed = 20 - (rSense - rRead) / Kp; // Sets speed based on sensor readings divided by setpoint value
 
   if (rSpeed < 0) {
     rSpeed = 0;
