@@ -1,8 +1,7 @@
 //VERSION 2 OF INCREMENTAL TESTING BY LAUREN
 //runs motors at constant speed, prints IR data to serial
 
-//currently: runs both motors successfully and also prints data from both sensors to serial
-//PROBLEMS: all data from sensors is 1023. need to debug.
+//currently works: runs both motors successfully and also prints data from both sensors to serial
 
 // Initial PID loop control for line follower
 #include <stdlib.h>
